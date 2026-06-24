@@ -22,27 +22,25 @@ import {
     Terminal,
     Cloud,
     FileText,
-    Activity,
     Circle,
-    Star
+    ArrowRight
 } from 'lucide-react'
 
 export default function MainPage() {
-    const budget = 43000
     const hourlyRate = 600
 
     const stages = [
-        { name: "Интерфейс (UI/UX)", hours: 12, description: "Дизайн-система, компоненты, адаптив", icon: Grid3x3 },
-        { name: "Роли и доступы", hours: 8, description: "Система прав, авторизация, профили", icon: Users },
-        { name: "Бэкенд (API)", hours: 20, description: "REST API, бизнес-логика, микросервисы", icon: Server },
-        { name: "База данных", hours: 10, description: "Схема, миграции, оптимизация запросов", icon: Database },
-        { name: "Интеграция с AI (Voice to Text)", hours: 16, description: "Распознавание речи, транскрипция", icon: Brain },
-        { name: "Алгоритмы анализа текста", hours: 14, description: "NLP, тональность, сущности, инсайты", icon: MessageSquare },
-        { name: "Интеграция с Telegram API", hours: 10, description: "Webhook, обработка сообщений, бот", icon: Workflow },
-        { name: "Настройка инфраструктуры", hours: 8, description: "Docker, CI/CD, мониторинг", icon: Cloud },
-        { name: "Посадка и деплой", hours: 4, description: "Хостинг, SSL, домен, релиз", icon: Rocket },
-        { name: "Тестирование и отладка", hours: 10, description: "Unit, интеграционные, E2E тесты", icon: Terminal },
-        { name: "Документация и обучение", hours: 6, description: "API docs, инструкции, демо", icon: FileText },
+        { name: "Интерфейс (UI/UX)", hours: 14, description: "Дизайн-система, компоненты, адаптив", icon: Grid3x3 },
+        { name: "Роли и доступы", hours: 9, description: "Система прав, авторизация, профили", icon: Users },
+        { name: "Бэкенд (API)", hours: 22, description: "REST API, бизнес-логика, микросервисы", icon: Server },
+        { name: "База данных", hours: 11, description: "Схема, миграции, оптимизация запросов", icon: Database },
+        { name: "Интеграция с AI (Voice to Text)", hours: 18, description: "Распознавание речи, транскрипция", icon: Brain },
+        { name: "Алгоритмы анализа текста", hours: 16, description: "NLP, тональность, сущности, инсайты", icon: MessageSquare },
+        { name: "Интеграция с Telegram API", hours: 11, description: "Webhook, обработка сообщений, бот", icon: Workflow },
+        { name: "Настройка инфраструктуры", hours: 9, description: "Docker, CI/CD, мониторинг", icon: Cloud },
+        { name: "Посадка и деплой", hours: 5, description: "Хостинг, SSL, домен, релиз", icon: Rocket },
+        { name: "Тестирование и отладка", hours: 12, description: "Unit, интеграционные, E2E тесты", icon: Terminal },
+        { name: "Документация и обучение", hours: 7, description: "API docs, инструкции, демо", icon: FileText },
     ]
 
     const totalCalculated = stages.reduce((sum, s) => sum + s.hours, 0)
@@ -50,14 +48,12 @@ export default function MainPage() {
 
     return (
         <div className="min-h-screen bg-[#0A0A0F] font-ui overflow-x-hidden">
-            {/* Background Effects */}
             <div className="fixed inset-0 pointer-events-none">
                 <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#00F5FF]/5 rounded-full blur-3xl" />
                 <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#FF00FF]/5 rounded-full blur-3xl" />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-[#00FF9D]/3 rounded-full blur-3xl" />
             </div>
 
-            {/* Header */}
             <header className="relative border-b border-[#1E40AF]/10 bg-[#0A0A0F]/80 backdrop-blur-xl sticky top-0 z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16">
@@ -71,10 +67,6 @@ export default function MainPage() {
                             </div>
                         </div>
                         <div className="flex items-center gap-4">
-                            <div className="hidden sm:flex items-center gap-2 bg-[#00F5FF]/10 px-3 py-1.5 rounded-lg border border-[#00F5FF]/20">
-                                <Activity className="w-4 h-4 text-[#00F5FF]" />
-                                <span className="text-[#00F5FF] text-xs font-mono font-semibold">LIVE</span>
-                            </div>
                             <div className="flex items-center gap-2 bg-[#1A1A2E] px-3 py-1.5 rounded-lg border border-[#1E40AF]/20">
                                 <Calendar className="w-4 h-4 text-[#00F5FF]" />
                                 <span className="text-[#E0F2FE] text-sm font-medium">Старт: 1 июля</span>
@@ -84,7 +76,6 @@ export default function MainPage() {
                 </div>
             </header>
 
-            {/* Hero Section */}
             <section className="relative">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -132,49 +123,16 @@ export default function MainPage() {
                                 </div>
                             </div>
                         </div>
-
-                        <div className="flex justify-center lg:justify-end">
-                            <div className="w-full max-w-md bg-gradient-to-br from-[#00F5FF]/10 via-[#12121A] to-[#FF00FF]/10 p-8 rounded-3xl border border-[#00F5FF]/20 backdrop-blur-sm relative overflow-hidden">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-[#00F5FF]/10 rounded-full blur-2xl" />
-                                <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#FF00FF]/10 rounded-full blur-2xl" />
-                                
-                                <div className="relative text-center space-y-4">
-                                    <div className="flex items-center justify-center gap-2">
-                                        <Star className="w-5 h-5 text-[#F59E0B] fill-[#F59E0B]" />
-                                        <span className="text-[#E0F2FE]/40 text-sm font-mono">БЮДЖЕТ ПРОЕКТА</span>
-                                    </div>
-                                    <p className="text-5xl sm:text-6xl font-bold bg-gradient-to-r from-[#00F5FF] to-[#00FF9D] bg-clip-text text-transparent font-mono">
-                                        {budget.toLocaleString()} ₽
-                                    </p>
-                                    <div className="flex justify-center gap-6 text-sm">
-                                        <div>
-                                            <p className="text-[#E0F2FE]/40">Часов</p>
-                                            <p className="text-[#E0F2FE] font-mono font-semibold">{totalCalculated}</p>
-                                        </div>
-                                        <div className="w-px bg-[#1E40AF]/20" />
-                                        <div>
-                                            <p className="text-[#E0F2FE]/40">Ставка</p>
-                                            <p className="text-[#E0F2FE] font-mono font-semibold">{hourlyRate} ₽</p>
-                                        </div>
-                                    </div>
-                                    <div className="h-1 bg-[#1E40AF]/20 rounded-full overflow-hidden">
-                                        <div className="h-full bg-gradient-to-r from-[#00F5FF] to-[#00FF9D] rounded-full animate-progress" />
-                                    </div>
-                                    <p className="text-[#E0F2FE]/30 text-xs font-mono">Фиксированная стоимость</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Stats Section */}
             <section className="relative -mt-4">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                         {[
                             { label: "Компонентов", value: "120+", icon: Layers, color: "from-[#00F5FF] to-[#00F5FF]/40" },
-                            { label: "Экранов", value: "7", icon: Grid3x3, color: "from-[#00FF9D] to-[#00FF9D]/40" },
+                            { label: "Экранов", value: "7+", icon: Grid3x3, color: "from-[#00FF9D] to-[#00FF9D]/40" },
                             { label: "API эндпоинтов", value: "30+", icon: GitBranch, color: "from-[#FF00FF] to-[#FF00FF]/40" },
                             { label: "Микросервисов", value: "4", icon: Server, color: "from-[#E0F2FE] to-[#E0F2FE]/40" },
                             { label: "Интеграций", value: "3", icon: Workflow, color: "from-[#F59E0B] to-[#F59E0B]/40" },
@@ -281,26 +239,28 @@ export default function MainPage() {
                                 <div key={index} className="group relative bg-[#12121A] rounded-xl border border-[#1E40AF]/10 hover:border-[#00F5FF]/20 transition-all duration-300 hover:translate-x-1">
                                     <div className="absolute inset-0 bg-gradient-to-r from-[#00F5FF]/0 via-[#00F5FF]/0 to-[#00F5FF]/0 group-hover:from-[#00F5FF]/5 group-hover:via-[#00F5FF]/5 group-hover:to-transparent rounded-xl transition-all duration-500" />
                                     <div className="relative p-4 sm:p-5">
-                                        <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
-                                            <div className="flex items-center gap-3 sm:w-56 lg:w-72 flex-shrink-0">
+                                        <div className="flex flex-wrap items-center gap-3">
+                                            <div className="flex items-center gap-3 flex-shrink-0">
                                                 <div className="w-8 h-8 rounded-lg bg-[#00F5FF]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#00F5FF]/20 transition-colors">
                                                     <Icon className="w-4 h-4 text-[#00F5FF]" />
                                                 </div>
                                                 <span className="text-xs font-mono text-[#00F5FF]/50 bg-[#00F5FF]/5 px-2 py-0.5 rounded flex-shrink-0">
                                                     #{String(index + 1).padStart(2, '0')}
                                                 </span>
-                                                <span className="text-sm sm:text-base font-semibold text-[#E0F2FE] truncate">{stage.name}</span>
                                             </div>
-                                            <div className="flex-1 min-w-0">
+                                            <span className="text-sm sm:text-base font-semibold text-[#E0F2FE] flex-1 min-w-[120px]">
+                                                {stage.name}
+                                            </span>
+                                            <div className="w-full sm:w-auto sm:flex-1 min-w-[120px]">
                                                 <div className="flex items-center gap-3">
                                                     <div className="flex-1 h-1.5 bg-[#1E40AF]/10 rounded-full overflow-hidden">
                                                         <div className="h-full bg-gradient-to-r from-[#00F5FF] to-[#00FF9D] rounded-full transition-all duration-1000" style={{ width: `${percent}%` }} />
                                                     </div>
                                                     <span className="text-xs font-mono text-[#E0F2FE]/40 w-12 text-right flex-shrink-0">{percent}%</span>
                                                 </div>
-                                                <p className="text-xs text-[#E0F2FE]/30 mt-1 truncate">{stage.description}</p>
+                                                <p className="text-xs text-[#E0F2FE]/40 mt-1 truncate">{stage.description}</p>
                                             </div>
-                                            <div className="flex items-center gap-4 sm:gap-6 flex-shrink-0">
+                                            <div className="flex items-center gap-4 sm:gap-6 flex-shrink-0 ml-auto">
                                                 <span className="text-sm font-mono text-[#E0F2FE]/60 flex items-center gap-1">
                                                     <Clock className="w-3 h-3" />
                                                     {stage.hours} ч
@@ -384,6 +344,34 @@ export default function MainPage() {
                 </div>
             </section>
 
+            <section className="relative">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+                    <div className="text-center bg-gradient-to-br from-[#00F5FF]/5 via-[#12121A] to-[#FF00FF]/5 rounded-3xl border border-[#1E40AF]/10 p-8 sm:p-12 relative overflow-hidden group">
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#00F5FF]/0 via-[#00F5FF]/5 to-[#00F5FF]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+                        
+                        <div className="relative">
+                            <div className="inline-flex items-center gap-2 bg-[#00F5FF]/10 px-3 py-1.5 rounded-full border border-[#00F5FF]/20 mb-4">
+                                <Rocket className="w-4 h-4 text-[#00F5FF]" />
+                                <span className="text-[#00F5FF] text-xs font-mono font-semibold">ГОТОВЫ К ТРАНСФОРМАЦИИ</span>
+                            </div>
+                            <h3 className="text-2xl sm:text-4xl font-bold text-[#E0F2FE] mb-4">
+                                Начнем создавать <span className="text-[#00F5FF]">будущее</span> коммуникаций
+                            </h3>
+                            <p className="text-[#E0F2FE]/40 max-w-2xl mx-auto mb-8">
+                                Получите детальную презентацию и дорожную карту проекта в течение 24 часов
+                            </p>
+                            <button className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#00F5FF] to-[#00FF9D] rounded-xl font-semibold text-[#0A0A0F] overflow-hidden transition-all hover:scale-105 active:scale-95">
+                                <span className="relative z-10 flex items-center gap-2">
+                                    Обсудить проект
+                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                </span>
+                                <div className="absolute inset-0 bg-white/20 group-hover:translate-y-0 translate-y-full transition-transform duration-300" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <footer className="border-t border-[#1E40AF]/10 py-6">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -391,6 +379,9 @@ export default function MainPage() {
                             <Brain className="w-5 h-5 text-[#00F5FF]" />
                             <span className="text-[#E0F2FE]/40 text-sm">Perfaura × ConvertMe</span>
                         </div>
+                        <p className="text-[#E0F2FE]/30 text-xs">
+                            © 2026 — Коммерческое предложение. Все права защищены.
+                        </p>
                     </div>
                 </div>
             </footer>
