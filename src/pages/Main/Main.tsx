@@ -23,7 +23,6 @@ import {
     Cloud,
     FileText,
     Circle,
-    ArrowRight
 } from 'lucide-react'
 
 export default function MainPage() {
@@ -339,34 +338,6 @@ export default function MainPage() {
                                     </span>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className="relative">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-                    <div className="text-center bg-gradient-to-br from-[#00F5FF]/5 via-[#12121A] to-[#FF00FF]/5 rounded-3xl border border-[#1E40AF]/10 p-8 sm:p-12 relative overflow-hidden group">
-                        <div className="absolute inset-0 bg-gradient-to-r from-[#00F5FF]/0 via-[#00F5FF]/5 to-[#00F5FF]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-                        
-                        <div className="relative">
-                            <div className="inline-flex items-center gap-2 bg-[#00F5FF]/10 px-3 py-1.5 rounded-full border border-[#00F5FF]/20 mb-4">
-                                <Rocket className="w-4 h-4 text-[#00F5FF]" />
-                                <span className="text-[#00F5FF] text-xs font-mono font-semibold">ГОТОВЫ К ТРАНСФОРМАЦИИ</span>
-                            </div>
-                            <h3 className="text-2xl sm:text-4xl font-bold text-[#E0F2FE] mb-4">
-                                Начнем создавать <span className="text-[#00F5FF]">будущее</span> коммуникаций
-                            </h3>
-                            <p className="text-[#E0F2FE]/40 max-w-2xl mx-auto mb-8">
-                                Получите детальную презентацию и дорожную карту проекта в течение 24 часов
-                            </p>
-                            <button className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#00F5FF] to-[#00FF9D] rounded-xl font-semibold text-[#0A0A0F] overflow-hidden transition-all hover:scale-105 active:scale-95">
-                                <span className="relative z-10 flex items-center gap-2">
-                                    Обсудить проект
-                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                </span>
-                                <div className="absolute inset-0 bg-white/20 group-hover:translate-y-0 translate-y-full transition-transform duration-300" />
-                            </button>
                         </div>
                     </div>
                 </div>
